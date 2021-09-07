@@ -3,6 +3,12 @@ package module
 import (
 	"context"
 	"github.com/ProjectAthenaa/sonic-core/protos/module"
+	"github.com/ProjectAthenaa/sonic-core/sonic"
+	"github.com/ProjectAthenaa/sonic-core/sonic/antibots/ticket"
+)
+
+var (
+	ticketClient ticket.TicketClient
 )
 
 type Server struct {
@@ -10,6 +16,11 @@ type Server struct {
 }
 
 func init() {
+	var err error
+	ticketClient, err = sonic.NewTicketClient("localhost:3000")
+	if err != nil {
+		panic(err)
+	}
 	return
 }
 

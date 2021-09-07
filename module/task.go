@@ -4,7 +4,7 @@ import (
 	"github.com/ProjectAthenaa/sonic-core/protos/module"
 	"github.com/ProjectAthenaa/sonic-core/sonic/base"
 	"github.com/ProjectAthenaa/sonic-core/sonic/face"
-	"github.com/ProjectAthenaa/sonic-core/sonic/frame"
+	"sync"
 )
 
 var _ face.ICallback = (*Task)(nil)
@@ -15,6 +15,12 @@ type Task struct {
 	cParam string
 	sizeId string
 	csrf string
+
+	ticketHash string
+	ticketLocker *sync.Mutex
+
+	color string
+	size string
 }
 
 func NewTask(data *module.Data) *Task {
@@ -34,6 +40,8 @@ func (tk *Task) OnPreStart() error {
 
 func (tk *Task) OnStarting() {
 	tk.FastClient.CreateCookieJar()
+	tk.ticketLocker = &sync.Mutex{}
+
 	tk.Flow()
 }
 func (tk *Task) OnPause() error {
@@ -46,19 +54,6 @@ func (tk *Task) OnStopping() {
 }
 
 func (tk *Task) Flow() {
-	pubsub, err := frame.SubscribeToChannel(tk.Data.Channels.MonitorChannel)
-	if err != nil{
-		tk.Stop()
-		return
-	}
-	defer pubsub.Close()
-
-	tk.SetStatus(module.STATUS_MONITORING)
-	monitorData := <- pubsub.Chan(tk.Ctx)
-	tk.sizeId = monitorData["sizeId"].(string)
-
-	tk.SetStatus(module.STATUS_PRODUCT_FOUND)
-
 	funcarr := []func(){
 		tk.ATC,
 		tk.GetNtbcc,

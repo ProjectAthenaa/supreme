@@ -3,7 +3,8 @@ module github.com/ProjectAthenaa/supreme
 go 1.17
 
 require (
-	github.com/ProjectAthenaa/sonic-core v0.0.0-20210907034321-6fef98f27cd0
+	github.com/ProjectAthenaa/newbalance v0.0.0-20210907033456-768c794e2655
+	github.com/ProjectAthenaa/sonic-core v0.0.0-20210907044355-8ef2ab2a312c
 	github.com/prometheus/common v0.4.0
 	google.golang.org/grpc v1.40.0
 )
@@ -13,7 +14,6 @@ require (
 	entgo.io/ent v0.9.1 // indirect
 	github.com/99designs/gqlgen v0.13.0 // indirect
 	github.com/DataDog/zstd v1.4.8 // indirect
-	github.com/ProjectAthenaa/go-credit-card v0.0.0-20210810002457-6d1ce3720969 // indirect
 	github.com/agnivade/levenshtein v1.1.1 // indirect
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751 // indirect
 	github.com/alecthomas/units v0.0.0-20210208195552-ff826a37aa15 // indirect
