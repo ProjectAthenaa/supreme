@@ -36,11 +36,9 @@ func NewTask(data *module.Data) *Task {
 func (tk *Task) OnInit() {
 	return
 }
-
 func (tk *Task) OnPreStart() error {
 	return nil
 }
-
 func (tk *Task) OnStarting() {
 	tk.FastClient.CreateCookieJar()
 	tk.ticketLocker = &sync.Mutex{}
