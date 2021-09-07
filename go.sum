@@ -28,8 +28,8 @@ github.com/DataDog/zstd v1.4.8/go.mod h1:g4AWEaM3yOg3HYfnJ3YIawPnVdXJh9QME85blwS
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
 github.com/ProjectAthenaa/newbalance v0.0.0-20210907033456-768c794e2655 h1:Ps8xm9xS9JLwPqoRYWAjtd3WrcHAgBRfgQa+88Qb6fU=
 github.com/ProjectAthenaa/newbalance v0.0.0-20210907033456-768c794e2655/go.mod h1:f+4l6FpMPlfdemD3BDhrU9cxZ3a0eb8YPQLsnlriVHc=
-github.com/ProjectAthenaa/sonic-core v0.0.0-20210907044355-8ef2ab2a312c h1:uJHlzi+OvJTcUb7T3ZIkKvTA+FUfyqR6GeJqbNVkLJA=
-github.com/ProjectAthenaa/sonic-core v0.0.0-20210907044355-8ef2ab2a312c/go.mod h1:AhWnmhNFTTM9/2RVERXsAG0h10KMWFxgG013rAwLQGQ=
+github.com/ProjectAthenaa/sonic-core v0.0.0-20210907054504-712130aa1691 h1:t+BAFvUkeJg4a/wF9NZQwHZU+KTvSobc74XCXNY9Jrc=
+github.com/ProjectAthenaa/sonic-core v0.0.0-20210907054504-712130aa1691/go.mod h1:AhWnmhNFTTM9/2RVERXsAG0h10KMWFxgG013rAwLQGQ=
 github.com/agnivade/levenshtein v1.0.1/go.mod h1:CURSv5d9Uaml+FovSIICkLbAUZ9S4RqaHDIsdSBg7lM=
 github.com/agnivade/levenshtein v1.0.3/go.mod h1:4SFRZbbXWLF4MU1T9Qg0pGgH3Pjs+t6ie5efyrwRJXs=
 github.com/agnivade/levenshtein v1.1.0/go.mod h1:veldBMzWxcCG2ZvUTKD2kJNRdCk5hVbJomOvKkmgYbo=

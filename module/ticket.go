@@ -20,6 +20,7 @@ func (tk *Task) ProcessTicket(){
 func (tk *Task) GetNtbcc(){
 	tk.ticketLocker.Lock()
 	defer tk.ticketLocker.Unlock()
+
 	cookie, err := ticketClient.GenerateCookie(tk.Ctx, &ticket.GenerateCookieRequest{
 		Proxy: *tk.FormatProxy(),
 		Hash:  tk.ticketHash,

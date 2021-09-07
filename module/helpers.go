@@ -19,10 +19,20 @@ func (tk *Task) AwaitMonitor() {
 
 	tk.SetStatus(module.STATUS_MONITORING)
 	for data := range pubsub.Chan(tk.Ctx){
-		if tk.size == data["size"].(string) && tk.color == data["color"].(string){
+		if (tk.Data.TaskData.RandomSize || existInSlice(data["size"].(string), tk.Data.TaskData.Size)) && (tk.Data.TaskData.RandomColor|| existInSlice(data["color"].(string), tk.Data.TaskData.Color)){
 			tk.sizeId = data["sizeId"].(string)
+			tk.PID = data["pid"].(string)
 			break
 		}
 	}
 	tk.SetStatus(module.STATUS_PRODUCT_FOUND)
+}
+
+func existInSlice(keyword string, stringSlice []string)bool{
+	for _, substr := range stringSlice{
+		if substr == keyword{
+			return true
+		}
+	}
+	return false
 }

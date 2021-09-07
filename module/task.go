@@ -11,6 +11,9 @@ var _ face.ICallback = (*Task)(nil)
 
 type Task struct {
 	*base.BTask
+
+	PID string
+
 	liveJson string
 	cParam string
 	sizeId string
@@ -42,6 +45,7 @@ func (tk *Task) OnStarting() {
 	tk.FastClient.CreateCookieJar()
 	tk.ticketLocker = &sync.Mutex{}
 
+	go tk.ProcessTicket()
 	tk.Flow()
 }
 func (tk *Task) OnPause() error {
@@ -55,10 +59,13 @@ func (tk *Task) OnStopping() {
 
 func (tk *Task) Flow() {
 	funcarr := []func(){
+		tk.AwaitMonitor,
+		tk.GetNtbcc,
 		tk.ATC,
 		tk.GetNtbcc,
 		tk.GetCSRF,
 		//hcaptcha
+		tk.GetNtbcc,
 		tk.GetCheckout,
 	}
 

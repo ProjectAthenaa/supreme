@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/ProjectAthenaa/newbalance v0.0.0-20210907033456-768c794e2655
-	github.com/ProjectAthenaa/sonic-core v0.0.0-20210907044355-8ef2ab2a312c
+	github.com/ProjectAthenaa/sonic-core v0.0.0-20210907054504-712130aa1691
 	github.com/prometheus/common v0.4.0
 	google.golang.org/grpc v1.40.0
 )
