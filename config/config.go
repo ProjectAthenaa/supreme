@@ -2,23 +2,17 @@ package config
 
 import (
 	"github.com/ProjectAthenaa/sonic-core/sonic"
-	"os"
-	"strings"
+	"github.com/ProjectAthenaa/sonic-core/sonic/database/ent/product"
 )
 
 var Module *sonic.Module
 
 func init() {
-	var name = "Supreme"
-
-	if podName := os.Getenv("POD_NAME"); podName != "" {
-		name = strings.Split(podName, "-")[0]
-	}
 
 	categoryKey := "LOOKUP_category"
 
 	Module = &sonic.Module{
-		Name:     name,
+		Name:     string(product.SiteSupreme),
 		Accounts: false,
 		Fields: []*sonic.ModuleField{
 			{
@@ -26,10 +20,10 @@ func init() {
 				Label: "Keywords",
 			},
 			{
-				Type:     sonic.FieldTypeDropDown,
-				Label:    "Category",
-				FieldKey: &categoryKey,
-				DropdownValues: []string{"Shirts", "Pants", "Accessories", "Tops/Sweaters", "Sweatshirts", "Hats", "Jackets", "Skate", "Bags", "Shoes", "New",},
+				Type:           sonic.FieldTypeDropDown,
+				Label:          "Category",
+				FieldKey:       &categoryKey,
+				DropdownValues: []string{"Shirts", "Pants", "Accessories", "Tops/Sweaters", "Sweatshirts", "Hats", "Jackets", "Skate", "Bags", "Shoes", "New"},
 			},
 		},
 	}
