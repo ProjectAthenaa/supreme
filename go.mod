@@ -3,7 +3,7 @@ module github.com/ProjectAthenaa/supreme
 go 1.17
 
 require (
-	github.com/ProjectAthenaa/sonic-core v0.0.0-20210810002457-6d1ce3720969
+	github.com/ProjectAthenaa/sonic-core v0.0.0-20210914181846-a348cf4eff99
 	github.com/google/uuid v1.3.0
 	github.com/prometheus/common v0.4.0
 	google.golang.org/grpc v1.40.0
@@ -16,7 +16,7 @@ require (
 	github.com/DataDog/zstd v1.4.8 // indirect
 	github.com/agnivade/levenshtein v1.1.1 // indirect
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751 // indirect
-	github.com/alecthomas/units v0.0.0-20210912230133-d1bdfacee922 // indirect
+	github.com/alecthomas/units v0.0.0-20210208195552-ff826a37aa15 // indirect
 	github.com/andybalholm/brotli v1.0.3 // indirect
 	github.com/arsmn/fastgql v0.14.0 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
