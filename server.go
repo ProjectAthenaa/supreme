@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/ProjectAthenaa/sonic-core/protos/module"
 	"github.com/ProjectAthenaa/sonic-core/sonic"
-	"github.com/ProjectAthenaa/newbalance/config"
+	"github.com/ProjectAthenaa/supreme/config"
 	moduleServer "github.com/ProjectAthenaa/supreme/module"
 	"github.com/prometheus/common/log"
 	"google.golang.org/grpc"
