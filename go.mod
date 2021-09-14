@@ -3,8 +3,7 @@ module github.com/ProjectAthenaa/supreme
 go 1.17
 
 require (
-	github.com/ProjectAthenaa/newbalance v0.0.0-20210907033456-768c794e2655
-	github.com/ProjectAthenaa/sonic-core v0.0.0-20210914020022-da2ec577c57d
+	github.com/ProjectAthenaa/sonic-core v0.0.0-20210810002457-6d1ce3720969
 	github.com/google/uuid v1.3.0
 	github.com/prometheus/common v0.4.0
 	google.golang.org/grpc v1.40.0
